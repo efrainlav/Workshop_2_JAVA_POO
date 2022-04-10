@@ -17,9 +17,9 @@ classDiagram
       Spacecraft <|-- Shuttle
       Spacecraft <|-- Unmanned
       Spacecraft <|-- Manned
-      Manned <|-- SpatialStation	
-	  
-      class Spacecraft{          
+      Manned <|-- SpatialStation	  
+      class Spacecraft{
+          
           + accelerate()
           + fuelStatus()
 		  + getPower()

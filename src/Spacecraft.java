@@ -5,6 +5,7 @@ public abstract class Spacecraft {
     public String name;
     public Date launchedDate;
     public String country;
+    public String type;
     protected String typeFuel;
     protected String fuelLevel;
     private int power;
