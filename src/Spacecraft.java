@@ -5,8 +5,8 @@ public abstract class Spacecraft {
     public String name;
     public Date launchedDate;
     public String country;
-    protected String fuel;
-    private int type;
+    protected String typeFuel;
+    protected String fuelLevel;
     private int power;
     private int velocity;
 
@@ -14,14 +14,14 @@ public abstract class Spacecraft {
     /**
      *
      * @param type Kind of spacecraft 1- 2- 3-
-     * @param name The name of teh spacecraft
+     * @param name The name of the spacecraft
      * @param launchedDate The date that teh spacecraft was launched
      */
-    public Spacecraft(int type, String name, Date launchedDate ){
-        this.type = type;
+    public Spacecraft(String name, Date launchedDate ){
         this.name = name;
         this.launchedDate = launchedDate;
         this.velocity = 0;
+        this.power=0;
     }
 
     //Methods
@@ -38,28 +38,35 @@ public abstract class Spacecraft {
      */
     public abstract void fuelStatus();
 
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
+    /**
+    *Public method used to get the power of spacecraft
+     */
     public int getPower() {
         return power;
     }
+ 
+    /**
+    *Public method used to set the power of spacecraft
+     */
 
     public void setPower(int power) {
         this.power = power;
     }
 
+
+    /**
+    *Public method used to get the velocity of spacecraft
+     */
     public int getVelocity() {
         return velocity;
     }
 
+    /**
+    *Public method used to set the velocity of spacecraft
+     */
     public void setVelocity(int velocity) {
         this.velocity = velocity;
     }
+
+    
 }
